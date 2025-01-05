@@ -6,7 +6,7 @@ const Header = () => {
         <div className='header-main absolute z-10 top-0'>
           <div className='container'>
             <div className='header-inner'>
-              <div className='logo'>Helo</div>
+              <div className='logo'>Hello</div>
             </div>
           </div>
         </div>
