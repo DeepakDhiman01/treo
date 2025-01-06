@@ -7,6 +7,7 @@ import heroImageTwo from '../assets/images/medium-shot-doctor-helping-woman.png'
 function homepage() {
   return (
     <>
+      <section>
         <div className='hero-section h-[800px] content-center bg-main-image bg-cover bg-center	pt-[70px]'>
             <div className='container'>
               <div className='hero-main grid grid-cols-2'>
@@ -30,6 +31,7 @@ function homepage() {
               </div>
             </div>
         </div>
+      </section>
     </>
   )
 }

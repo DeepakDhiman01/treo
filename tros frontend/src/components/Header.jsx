@@ -26,7 +26,7 @@ const Header = () => {
                 </div>
                 <div className='header-btn col-span-3 content-center'>
                   <div className='btn flex p-0 justify-end'>
-                      <span className='px-10 py-3 bg-primary-color rounded-full text-white content-center'>Login / Sign up</span>
+                      <span className='px-10 py-2 bg-primary-color rounded-full text-white content-center'>Login / Sign up</span>
                       <span className='p-3 ml-4'><CiMenuFries className='text-3xl'/>
                       </span>
                   </div>
