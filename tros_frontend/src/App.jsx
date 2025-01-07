@@ -5,22 +5,51 @@ import Header from './components/Header'
 
 // pages
 import HomePage from './pages/HomePage'
+// routes
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import './App.css'
 import Footer from './components/Footer'
 import GetInTouch from './components/GetInTouch'
+import     Layout from   './pages/Layout'
+import Private from './Auth/Private';
+import Authcontext from './Auth/Authcontext';
+
 
 function App() {
 
-
+ console.log(" code run in app.js")
   return (
     <>
       <div>
         <div className='main-container'>
-          <Header/>
-          <HomePage/>
-          <GetInTouch/>
-          <Footer/>
+      
+         <Router>
+         <Header/>
+         <Authcontext>
+          <Routes>
+
+            {/* public routes */}
+       <Route path='/'
+       element={ <HomePage/>} />
+
+       <Route path='/touch' element={ <GetInTouch/>}/>
+
+         
+        {/* private routes */}
+      <Route path='/layout/*'  element={
+        <Private>
+        <Layout/>
+        </Private>}  />
+
+          </Routes>
+          </Authcontext>
+          {/* <Footer/> */}
+         </Router>
+
+          
+         
+          
         </div>
       </div>
     </>
