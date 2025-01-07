@@ -3,6 +3,7 @@ import React from 'react'
 // image
 import heroImageOne from '../assets/images/young-caregiver-helping-senior-woman.png'
 import heroImageTwo from '../assets/images/medium-shot-doctor-helping-woman.png'
+import thumb from '../assets/images/shapes/thumb.png'
 
 function homepage() {
   return (
@@ -30,6 +31,31 @@ function homepage() {
                 </div>
               </div>
             </div>
+        </div>
+      </section>
+      <section>
+        <div className="about-sec py-20">
+          <div className='container-md px-30'>
+            <div className='about-inner grid grid-cols-10'>
+              <div className='about-info col-span-3'>
+                <div className='about-info-inner'>
+                  <div><img src={thumb}/></div>
+                  <div className='about-info-text'>
+                    <span className='font-extrabold text-7xl text-stroke-sm text-white'>250+</span>
+                  </div>
+                  <p className='font-medium'>Happy <br/>Clients of<br/> our Services</p>
+                </div>
+              </div>
+              <div className='main-content col-span-7'>
+                <div className='text-right'>
+                  <span className='font-bold'>About Us</span>
+                  <h2 className='text-6xl font-semibold'>Who <span className='hero-p bg-clip-text bg-gradient-to-r from-[#75C4E7] to-[#0410EF]'>We Are</span></h2>
+                  <p className='mt-4'>“ It’s not hard to find someone to help you with tasks. It’s finding someone who you can trust and depend on that gets tricky. That’s why, at Tranquility Outreach Support Services recruiting the right people is at the heart of our business. “</p>
+                  <span className='bg-primary-color text-white py-3 mt-4 px-10 rounded-full inline-block'>Let's Talk</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </>
