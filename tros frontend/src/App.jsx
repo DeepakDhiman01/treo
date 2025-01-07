@@ -8,6 +8,7 @@ import HomePage from './pages/HomePage'
 
 import './App.css'
 import Footer from './components/Footer'
+import GetInTouch from './components/GetInTouch'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <div className='main-container'>
           <Header/>
           <HomePage/>
+          <GetInTouch/>
           <Footer/>
         </div>
       </div>
