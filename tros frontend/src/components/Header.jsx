@@ -27,7 +27,7 @@ const Header = () => {
 
   return (
     <div className={`header-main relative z-10 top-0 header ${isScrollingUp ? 'show' : 'hide'}`}>
-      <div className="fixed py-4 w-full backdrop-blur-[3px]">
+      <div className=" py-4 w-full backdrop-blur-[3px]">
         <div className="container px-5">
           <div className="header-inner grid grid-cols-12 items-center">
             {/* Logo */}

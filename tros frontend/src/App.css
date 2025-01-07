@@ -4,3 +4,19 @@
 .hero-p{
   color: transparent;
 }
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+.header.show {
+  transform: translateY(0);
+}
+
+.header.hide {
+  transform: translateY(-100%);
+}
