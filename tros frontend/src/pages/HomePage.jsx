@@ -35,7 +35,7 @@ function homepage() {
       </section>
       <section>
         <div className="about-sec py-20">
-          <div className='container-md px-30'>
+          <div className='container mx-auto px-31'>
             <div className='about-inner grid grid-cols-10'>
               <div className='about-info col-span-3'>
                 <div className='about-info-inner'>
