@@ -14,6 +14,7 @@ import GetInTouch from './components/GetInTouch'
 import Layout from   './pages/Layout'
 import Private from './Auth/Private';
 import Authcontext from './Auth/Authcontext';
+import Signup from './Signup/Signup';
 
 
 function App() {
@@ -24,12 +25,13 @@ function App() {
       <div>
         <div className='main-container'>
           <Router>
-            <Header/>
+            {/* <Header/> */}
               <Authcontext>
                 <Routes>
                   {/* public Router */}
                   <Route path='/' element={ <HomePage/>} />
                   <Route path='/touch' element={ <GetInTouch/>}/>
+                  <Route path='/signup' element={<Signup/>} />
                   {/* private routes */}
                   <Route path='/layout/*'  element={<Private><Layout/></Private>}  />
                 </Routes>
