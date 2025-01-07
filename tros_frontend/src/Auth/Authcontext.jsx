@@ -13,10 +13,17 @@ const Authcontext = ({children}) => {
 
 
     const login = (token)=>{
+
+      console.log("login funcation is running")
         setAuth(token);
         navigate('/')
     }
 
+    const logout = ()=>{
+       console.log("logout funcation is running")
+      setAuth(false);
+      navigate('/')
+    }
 
 
 
