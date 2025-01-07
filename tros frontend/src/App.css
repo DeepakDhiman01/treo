@@ -1,22 +1,82 @@
 *{
   font-family: "Plus Jakarta Sans", serif;
 }
-.hero-p{
-  color: transparent;
-}
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  color: white;
-  z-index: 1000;
-  transition: transform 0.3s ease;
-}
-.header.show {
-  transform: translateY(0);
+/* Header Styles */
+.header-main {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.8); /* Default background color */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(0); /* Default: header is visible */
 }
 
-.header.hide {
-  transform: translateY(-100%);
+.header-main.hide {
+  transform: translateY(-100%); /* Hides the header */
+}
+
+.header-main.show {
+  transform: translateY(0); /* Shows the header */
+}
+
+/* When the page is scrolled down (more than 30px) */
+.header-main.scrolled-down {
+  background-color: #333; /* Change the color to a darker shade when scrolled down */
+  color: #fff; /* Ensure text remains readable */
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.navbar ul li a:hover {
+  color: #1d4ed8; /* Replace with your primary color */
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Login / Sign Up Button */
+.btn button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn button:hover {
+  background-color: #2563eb; /* Slightly darker shade for hover effect */
+  transform: scale(1.05); /* Subtle zoom effect */
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+  .header-inner {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .menu {
+    display: none; /* Hide menu by default on smaller screens */
+  }
+
+  /* Show Menu on Click */
+  .menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 4rem; /* Adjust based on the header height */
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  }
 }

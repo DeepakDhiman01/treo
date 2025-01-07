@@ -9,7 +9,7 @@ function homepage() {
   return (
     <>
       <section>
-        <div className='hero-section h-[800px] content-center bg-main-image bg-cover bg-center	pt-[70px]'>
+        <div className='hero-section h-[800px] content-center bg-main-image bg-cover bg-center'>
             <div className='container'>
               <div className='hero-main grid grid-cols-2'>
                 <div className='hero-left content-center px-24'>
