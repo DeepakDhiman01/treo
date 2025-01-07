@@ -10,28 +10,15 @@ const Authcontext = ({children}) => {
     const [isauth, setAuth] = useState(true);
     // const [loading, setLoading] = useState(true); 
     const navigate = useNavigate();
-
-
     const login = (token)=>{
         setAuth(token);
         navigate('/')
     }
-
-
-
-
-
   return (
     <>
- 
-  <MyContext.Provider     value={{isauth , login }}  >
-
+      <MyContext.Provider value={{isauth , login }}>
          {children}
-  </MyContext.Provider>
- 
-
-
-    
+      </MyContext.Provider>
     </>
   )
 }

@@ -11,7 +11,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
 import Footer from './components/Footer'
 import GetInTouch from './components/GetInTouch'
-import     Layout from   './pages/Layout'
+import Layout from   './pages/Layout'
 import Private from './Auth/Private';
 import Authcontext from './Auth/Authcontext';
 
@@ -23,33 +23,19 @@ function App() {
     <>
       <div>
         <div className='main-container'>
-      
-         <Router>
-         <Header/>
-         <Authcontext>
-          <Routes>
-
-            {/* public routes */}
-       <Route path='/'
-       element={ <HomePage/>} />
-
-       <Route path='/touch' element={ <GetInTouch/>}/>
-
-         
-        {/* private routes */}
-      <Route path='/layout/*'  element={
-        <Private>
-        <Layout/>
-        </Private>}  />
-
-          </Routes>
-          </Authcontext>
-          {/* <Footer/> */}
-         </Router>
-
-          
-         
-          
+          <Router>
+            <Header/>
+              <Authcontext>
+                <Routes>
+                  {/* public Router */}
+                  <Route path='/' element={ <HomePage/>} />
+                  <Route path='/touch' element={ <GetInTouch/>}/>
+                  {/* private routes */}
+                  <Route path='/layout/*'  element={<Private><Layout/></Private>}  />
+                </Routes>
+              </Authcontext>
+              {/* <Footer/> */}
+          </Router> 
         </div>
       </div>
     </>
