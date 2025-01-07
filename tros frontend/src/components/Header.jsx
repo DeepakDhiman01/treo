@@ -34,16 +34,13 @@ const Header = () => {
   }, [prevScrollPos]);
 
   return (
-    <div className={`header-main relative z-10 top-0 header ${isScrollingUp ? 'show' : 'hide'} ${isScrolledDown ? 'scrolled-down' : ''}`}>
+    <div className={`header-main fixed w-full z-10 top-0 header ${isScrollingUp ? 'show' : 'hide'} ${isScrolledDown ? 'scrolled-down' : ''}`}>
       <div className="py-4 w-full backdrop-blur-[3px]">
         <div className="container px-5">
           <div className="header-inner grid grid-cols-12 items-center">
-            {/* Logo */}
             <div className="logo col-span-3">
               <img src={logo} alt="Tranquility Outreach Logo" className="w-72" />
             </div>
-
-            {/* Navigation Menu */}
             <div className="menu col-span-6">
               <nav className="menu-list">
                 <ul className="flex justify-center space-x-20 text-base">
@@ -54,11 +51,9 @@ const Header = () => {
                 </ul>
               </nav>
             </div>
-
-            {/* Buttons */}
             <div className="header-btn col-span-3">
               <div className="btn flex justify-end">
-                <button className="px-10 py-2 bg-primary-color rounded-full text-white">Login / Sign Up</button>
+                <button className="px-8 py-2 bg-primary-color rounded-full text-white">Login / Sign Up</button>
                 <button className="p-3 ml-4">
                   <CiMenuFries className="text-3xl" />
                 </button>
