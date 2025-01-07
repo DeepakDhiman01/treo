@@ -1,14 +1,14 @@
 import React, {  useState} from 'react';
-import './Login.css';
+// import './Login.css';
 import { FaEye } from "react-icons/fa";
 import axios from "axios";
-import { useAuth } from '../Authcontext';
+import { useAuth } from '../../Auth/Authcontext';
  import { Link, useNavigate, Navigate  } from 'react-router-dom';
  import { RiLockPasswordFill } from "react-icons/ri";
  import { FaUserAlt } from "react-icons/fa";
 
- import 'bootstrap/dist/css/bootstrap.min.css';
- import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+//  import 'bootstrap/dist/css/bootstrap.min.css';
+//  import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
 const Login = () => {

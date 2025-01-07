@@ -10,7 +10,7 @@ const { isauth } = useAuth();
 //    return <div>Loading...</div>; // Show a loading message or spinner
 //  }
     console.log("this is a privatge")
-    return isauth ? children : <Navigate to="/"  />;
+    return isauth ? children : <Navigate to="/" replace  />;
 }
 
 export default Private

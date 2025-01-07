@@ -15,6 +15,7 @@ import Layout from   './pages/Layout'
 import Private from './Auth/Private';
 import Authcontext from './Auth/Authcontext';
 import Signup from './Signup/Signup';
+import Login from './pages/Login/Login';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
                   <Route path='/' element={ <HomePage/>} />
                   <Route path='/touch' element={ <GetInTouch/>}/>
                   <Route path='/signup' element={<Signup/>} />
+                  <Route path='/login'  element={<Login/>} />
                   {/* private routes */}
                   <Route path='/layout/*'  element={<Private><Layout/></Private>}  />
                 </Routes>
