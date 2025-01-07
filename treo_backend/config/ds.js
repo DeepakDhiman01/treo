@@ -9,7 +9,7 @@ const connectDB = ( )=>{
     mongoose.connect(MONGO_URI);
  console.log("the data base is connected")
 }catch(err){
-  console.log(" the data base is not connected" ,err);
+  console.log(" the data base is not connectedhello" ,err);
 }
 
 
