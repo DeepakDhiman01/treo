@@ -36,15 +36,15 @@ const Signup = () => {
     };
 
     axios
-      .post('http://localhost:8000/user/signup', data)
+      .post('http://localhost:7000/user/signup', data)
       .then((res) => {
         localStorage.setItem("token", res.data.token);
         const tok = res.data.token;
 
         console.log("token", tok);
         console.log('Signup response:', res);
-        // login();
-        navigate('/');
+        login(res.data.token);
+        // navigate('/');
       })
       .catch((err) => {
         console.error('Signup error:', err);
