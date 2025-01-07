@@ -16,19 +16,6 @@ const Authcontext = ({children}) => {
         setAuth(token);
         navigate('/')
     }
-<<<<<<< HEAD
-
-    const logout = ()=>{
-       console.log("logout funcation is running")
-      setAuth(false);
-      navigate('/')
-    }
-
-
-
-
-=======
->>>>>>> fd6ef02679615cd0180cbc15050f89ed9ffb4720
   return (
     <>
       <MyContext.Provider value={{isauth , login }}>
