@@ -12,14 +12,23 @@ const Authcontext = ({children}) => {
     const navigate = useNavigate();
 
 // Function to handle login
-  const login = (token) => {
+  const login = ( token) => {
     console.log("Login function is running" ,token);
+
+    const  roletoken =  jwtDecode(token)
     if(token){
     localStorage.setItem("token", token);
-    setAuth(true);}
-  if(token)
-    navigate('/');
-  };
+    setAuth(true);
+  console.log("this is a realtoken" ,roletoken)
+  if(roletoken.role ==="client"){
+    navigate('/layout/client');
+  } ;
+
+  if(roletoken.role === "professional" ){
+    navigate('/layout/professional');}
+  } ;
+  }
+
 
   // Function to handle logout
   const logout = () => {

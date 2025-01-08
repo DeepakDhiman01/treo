@@ -4,7 +4,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-// import { useAuth } from '../Authcontext';
+import { useAuth } from '../../Auth/Authcontext';
 // import './Signup.css'
 import { FaUser } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -17,14 +17,31 @@ const Signup = () => {
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-const [role , setRole] = useState("client")
+
   const navigate = useNavigate();
-//   const { login } = useAuth();
+  const { login } = useAuth();
+
+
+  //  radio buttton
+  const [gender, setGender] = useState('');
+  const [role, setRole] = useState('');
+
+  // Handle gender change
+  const handleGenderChange = (event) => {
+    setGender(event.target.value);
+  };
+
+  // Handle role change
+  const handleRoleChange = (event) => {
+    setRole(event.target.value);
+  };
+
+
 
   const handleSubmit = (e) => {
     e.preventDefault(); // Prevent form from reloading the page
 
-    if (!username || !phone || !email || !password ||role) {
+    if (!username || !phone || !email || !password || !role || !gender) {
       alert('All fields are required');
       return;
     }
@@ -35,6 +52,7 @@ const [role , setRole] = useState("client")
       email,
       password,
       role,
+      gender,
     };
 
     axios
@@ -53,6 +71,8 @@ const [role , setRole] = useState("client")
         alert('Signup failed. Please try again.');
       });
   };
+   
+
 
   return (
     <div className=" sec-signup ">
@@ -116,8 +136,71 @@ const [role , setRole] = useState("client")
           />
         </div>
 
+
+        <div>
+      {/* Gender Selection */}
+      <div>
+        <h3>Gender</h3>
+        <label>
+          <input 
+            type="radio" 
+            name="gender" 
+            value="male" 
+            checked={gender === 'male'} 
+            onChange={handleGenderChange} 
+          /> 
+          Male
+        </label>
+        <label>
+          <input 
+            type="radio" 
+            name="gender" 
+            value="female" 
+            checked={gender === 'female'} 
+            onChange={handleGenderChange} 
+          /> 
+          Female
+        </label>
+      </div>
+
+      {/* Role Selection */}
+      <div>
+        <h3>Role</h3>
+        <label>
+          <input 
+            type="radio" 
+            name="role" 
+            value="client" 
+            checked={role === 'client'} 
+            onChange={handleRoleChange} 
+          /> 
+          Client
+        </label>
+        <label>
+          <input 
+            type="radio" 
+            name="role" 
+            value="professional" 
+            checked={role === 'professional'} 
+            onChange={handleRoleChange} 
+          /> 
+          Professional
+        </label>
+      </div>
+
+      {/* Display the selected values */}
+      {/* <div>
+        <p>Selected Gender: {gender}</p>
+        <p>Selected Role: {role}</p>
+      </div> */}
+    </div>
+
         <button type="submit" className="singup-submit  ">Signup</button>
       </form>
+
+
+      
+
     </div>
   );
 };

@@ -3,6 +3,8 @@ import { Route, Routes } from 'react-router-dom'
 import About from './About'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../Auth/Authcontext'
+import Client from './clientdashboard/Client'
+import Prodashboard from './Prodash/Prodashboard'
 
 
 const Layout = () => {
@@ -16,7 +18,14 @@ const Layout = () => {
          {isauth ? (
             <Routes>
                <Route path='/about' element={<About />} />
-            </Routes>) : (
+
+               <Route path='/client' element={<Client/>} />
+
+               <Route path='/professional' element={<Prodashboard/>}/>
+            </Routes>
+            
+         
+         ) : (
             navigate('/')
          )}
       </>

@@ -7,7 +7,7 @@ const bcrypt = require("bcrypt");
 
 
 const userSignup =  async (req, res) => {
-    const { username, email, phone, password } =  req.body;
+    const { username, email, phone, password , role , gender } =  req.body;
    
    console.log("this is a signup funcation in backend" )
    
@@ -29,6 +29,7 @@ const userSignup =  async (req, res) => {
         email,
         phone,
         role,
+        gender,
         
         password: hashedPassword,
       });

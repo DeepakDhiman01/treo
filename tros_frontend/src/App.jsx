@@ -14,7 +14,7 @@ import GetInTouch from './components/GetInTouch'
 import Layout from   './pages/Layout'
 import Private from './Auth/Private';
 import Authcontext from './Auth/Authcontext';
-import Signup from './Signup/Signup';
+import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login';
 
 

@@ -39,8 +39,9 @@ const userSchema = new mongoose.Schema({
 
   role : {
       type: String,
-enum: ['professional', 'clint'], 
-    default: 'male'
+enum: ['professional', 'client'], 
+required:true ,
+    default: 'client'
   },
 
   status: { type: String, enum: ['active', 'blocked'], default: 'active' },
