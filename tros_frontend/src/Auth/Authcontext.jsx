@@ -40,25 +40,59 @@ const Authcontext = ({children}) => {
     navigate('/login');
   };
 
+  // useEffect(() => {
+  //   const token = localStorage.getItem("token"); // Get the token from localStorage
+  //   if (token) {
+  //     try {
+  //       const decodedToken = jwtDecode(token);
+  //       // Here you could check the token expiration if needed
+  //       const expirationTime = decodedToken.exp * 1000; 
+  //       if (expirationTime < Date.now()) {
+  //         logout(); 
+  //       } else {
+  //         setAuth(true); 
+  //       }
+  //     } catch (error) {
+  //       console.error("Invalid token", error);
+  //       logout(); 
+  //     }
+  //   }
+  //   setLoading(false); 
+  // }, []);
+
   useEffect(() => {
-    const token = localStorage.getItem("token"); // Get the token from localStorage
-    if (token) {
-      try {
-        const decodedToken = jwtDecode(token);
-        // Here you could check the token expiration if needed
-        const expirationTime = decodedToken.exp * 1000; 
-        if (expirationTime < Date.now()) {
-          logout(); 
-        } else {
-          setAuth(true); 
+    const checkToken = () => {
+      console.log("check funcation is running ")
+      const token = localStorage.getItem("token"); // Get the token from localStorage
+      if (token) {
+        try {
+          const decodedToken = jwtDecode(token);
+          const expirationTime = decodedToken.exp * 1000; // Convert exp to milliseconds
+          if (expirationTime < Date.now()) {
+            logout(); // Log out if the token is expired
+          } else {
+            setAuth(true); // Set auth to true if the token is valid
+          }
+        } catch (error) {
+          console.error("Invalid token", error);
+          logout(); // Log out on error
         }
-      } catch (error) {
-        console.error("Invalid token", error);
-        logout(); 
+      } else {
+        setAuth(false); // No token found
       }
-    }
-    setLoading(false); 
+      setLoading(false); // Set loading to false
+    };
+
+    checkToken(); // Run once on mount
+
+    const intervalId = setInterval(() => {
+      checkToken(); // Run every 30 seconds
+    }, 30000);
+
+    return () => clearInterval(intervalId); // Cleanup interval on component unmount
   }, []);
+
+
 
   return (
     <>

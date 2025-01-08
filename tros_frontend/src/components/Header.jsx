@@ -3,6 +3,7 @@ import { CiMenuFries } from "react-icons/ci";
 
 // Image
 import logo from '../assets/images/logo/Tranquility-Outreach-Support-Services-Logo.png';
+import { Link  } from 'react-router-dom';
 
 const Header = () => {
   const [isScrollingUp, setIsScrollingUp] = useState(true);
@@ -44,10 +45,10 @@ const Header = () => {
             <div className="menu col-span-6">
               <nav className="menu-list">
                 <ul className="flex justify-center space-x-20 text-base">
-                  <li><a href="#home" className="hover:text-primary-color">Home</a></li>
-                  <li><a href="#about" className="hover:text-primary-color">About Us</a></li>
-                  <li><a href="#services" className="hover:text-primary-color">Our Service</a></li>
-                  <li><a href="#contact" className="hover:text-primary-color">Contact Us</a></li>
+                  <li><Link   to={'/'} className="hover:text-primary-color">Home</Link></li>
+                  <li><Link to={'/layout/about'}     className="hover:text-primary-color">About Us</Link></li>
+                  <li><Link    className="hover:text-primary-color">Our Service</Link></li>
+                  <li><Link    className="hover:text-primary-color">Contact Us</Link></li>
                 </ul>
               </nav>
             </div>
