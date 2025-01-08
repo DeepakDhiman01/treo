@@ -60,13 +60,12 @@ const Login = () => {
   }
   return (
     <>
-      <form>
+      <form className='mt-72' >
         
         <div className="login-page">
 
 
- <h1 className='text-black'>Login page</h1>
-
+         <h1 className='text-black'>Login page</h1>
           <div className="name">
           <FaUserAlt className='login-name-icon' />
 

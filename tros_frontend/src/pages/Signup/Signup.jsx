@@ -77,7 +77,7 @@ const Signup = () => {
   return (
     <div className=" sec-signup ">
       <form
-        className=" signup-form "
+        className=" signup-form mt-11 "
         onSubmit={handleSubmit}
         
       >
