@@ -46,18 +46,18 @@ const Authcontext = ({children}) => {
       try {
         const decodedToken = jwtDecode(token);
         // Here you could check the token expiration if needed
-        const expirationTime = decodedToken.exp * 1000; // JWT token expiration time
+        const expirationTime = decodedToken.exp * 1000; 
         if (expirationTime < Date.now()) {
-          logout(); // Log out if the token is expired
+          logout(); 
         } else {
-          setAuth(true); // Set isauth to true if the token is valid
+          setAuth(true); 
         }
       } catch (error) {
         console.error("Invalid token", error);
-        logout(); // Log out if the token is invalid
+        logout(); 
       }
     }
-    setLoading(false); // Set loading to false after the check
+    setLoading(false); 
   }, []);
 
   return (

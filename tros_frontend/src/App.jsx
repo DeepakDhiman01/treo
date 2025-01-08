@@ -26,7 +26,7 @@ function App() {
       <div>
         <div className='main-container'>
           <Router>
-            {/* <Header/> */}
+            <Header/>
               <Authcontext>
                 <Routes>
                   {/* public Router */}
@@ -38,7 +38,7 @@ function App() {
                   <Route path='/layout/*'  element={<Private><Layout/></Private>}  />
                 </Routes>
               </Authcontext>
-              {/* <Footer/> */}
+              <Footer/>
           </Router> 
         </div>
       </div>
