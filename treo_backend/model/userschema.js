@@ -34,9 +34,14 @@ const userSchema = new mongoose.Schema({
   phone:{
     type:Number,
     required:true,
-
+    
   },
 
+  role : {
+      type: String,
+enum: ['professional', 'clint'], 
+    default: 'male'
+  },
 
   status: { type: String, enum: ['active', 'blocked'], default: 'active' },
 

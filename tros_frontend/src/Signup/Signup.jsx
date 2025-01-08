@@ -17,13 +17,14 @@ const Signup = () => {
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+const [role , setRole] = useState("client")
   const navigate = useNavigate();
 //   const { login } = useAuth();
 
   const handleSubmit = (e) => {
     e.preventDefault(); // Prevent form from reloading the page
 
-    if (!username || !phone || !email || !password) {
+    if (!username || !phone || !email || !password ||role) {
       alert('All fields are required');
       return;
     }
@@ -33,16 +34,17 @@ const Signup = () => {
       phone,
       email,
       password,
+      role,
     };
 
     axios
       .post('http://localhost:7000/user/signup', data)
       .then((res) => {
-        localStorage.setItem("token", res.data.token);
-        const tok = res.data.token;
+        // localStorage.setItem("token", res.data.token);
+        // const tok = res.data.token;
 
-        console.log("token", tok);
-        console.log('Signup response:', res);
+        // console.log("token", tok);
+        // console.log('Signup response:', res);
         login(res.data.token);
         // navigate('/');
       })

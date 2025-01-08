@@ -28,6 +28,7 @@ const userSignup =  async (req, res) => {
         username,
         email,
         phone,
+        role,
         
         password: hashedPassword,
       });
@@ -40,7 +41,8 @@ const userSignup =  async (req, res) => {
   
       const payload = {
         username: username,
-        userid:  id
+        userid:  id,
+        role : role,
   
       }
       const  token =   generateToken(payload)
@@ -79,8 +81,8 @@ const userSignup =  async (req, res) => {
   
       const payload = {
         username: user.username,
-        userid: user._id
-  
+        userid: user._id,
+          userrole : user.role
       }
   
       console.log("this is a pay load ", payload);

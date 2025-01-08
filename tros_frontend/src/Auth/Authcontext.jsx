@@ -13,9 +13,11 @@ const Authcontext = ({children}) => {
 
 // Function to handle login
   const login = (token) => {
-    console.log("Login function is running");
-    setAuth(true); // Update isauth state to true when login occurs
-    localStorage.setItem("token", token); // Save the token in localStorage
+    console.log("Login function is running" ,token);
+    if(token){
+    localStorage.setItem("token", token);
+    setAuth(true);}
+  if(token)
     navigate('/');
   };
 
