@@ -10,6 +10,7 @@ const Authcontext = ({children}) => {
     const [isauth, setAuth] = useState(false);
      const [loading, setLoading] = useState(true); 
     const navigate = useNavigate();
+    const [role ,setRole] = useState();
 
 // Function to handle login
   const login = ( token) => {
@@ -19,6 +20,7 @@ const Authcontext = ({children}) => {
     if(token){
     localStorage.setItem("token", token);
     setAuth(true);
+    setRole(roletoken.role)
   console.log("this is a realtoken" ,roletoken)
   if(roletoken.role ==="client"){
     navigate('/layout/client');
@@ -33,6 +35,7 @@ const Authcontext = ({children}) => {
   // Function to handle logout
   const logout = () => {
     setAuth(false);
+    setRole(null); // Reset role on logout
     localStorage.removeItem("token");
     navigate('/login');
   };
@@ -59,7 +62,7 @@ const Authcontext = ({children}) => {
 
   return (
     <>
-      <MyContext.Provider value={{isauth , login }}>
+      <MyContext.Provider value={{isauth , login , role }}>
          {children}
       </MyContext.Provider>
     </>

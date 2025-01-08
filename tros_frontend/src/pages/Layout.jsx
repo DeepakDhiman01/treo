@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../Auth/Authcontext'
 import Client from './clientdashboard/Client'
 import Prodashboard from './Prodash/Prodashboard'
+import Private from '../Auth/Private'
 
 
 const Layout = () => {
@@ -19,9 +20,9 @@ const Layout = () => {
             <Routes>
                <Route path='/about' element={<About />} />
 
-               <Route path='/client' element={<Client/>} />
+               <Route path='/client' element={ <Private requiredRole="client" > <Client/> </Private>} />
 
-               <Route path='/professional' element={<Prodashboard/>}/>
+               <Route path='/professional' element={ <Private  requiredRole="professional" > <Prodashboard/></Private>  }/>
             </Routes>
             
          
