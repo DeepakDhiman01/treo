@@ -12,10 +12,11 @@ import './App.css'
 import Footer from './components/Footer'
 import GetInTouch from './components/GetInTouch'
 import Layout from   './pages/Layout'
-import Private from './Auth/Private';
+// import Private from './Auth/Private';
 import Authcontext from './Auth/Authcontext';
 import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login';
+import Private from './Auth/Private';
 
 
 function App() {
@@ -23,10 +24,10 @@ function App() {
  console.log(" code run in app.js")
   return (
     <>
-      <div>
-        <div className='main-container'>
+     
+        
           <Router>
-            {/* <Header/> */}
+            <Header/>
               <Authcontext>
                 <Routes>
                   {/* public Router */}
@@ -35,13 +36,12 @@ function App() {
                   <Route path='/signup' element={<Signup/>} />
                   <Route path='/login'  element={<Login/>} />
                   {/* private routes */}
-                  <Route path='/layout/*'  element={<Layout/>}  />
+                  <Route path='/layout/*'  element={ <Private> <Layout/> </Private>}  />
                 </Routes>
               </Authcontext>
-              <Footer/>
+              {/* <Footer/> */}
           </Router> 
-        </div>
-      </div>
+       
     </>
   )
 }
