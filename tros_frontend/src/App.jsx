@@ -24,24 +24,21 @@ function App() {
  console.log(" code run in app.js")
   return (
     <>
-     
-        
-          <Router>
-            <Header/>
-              <Authcontext>
-                <Routes>
-                  {/* public Router */}
-                  <Route path='/' element={ <HomePage/>} />
-                  <Route path='/touch' element={ <GetInTouch/>}/>
-                  <Route path='/signup' element={<Signup/>} />
-                  <Route path='/login'  element={<Login/>} />
-                  {/* private routes */}
-                  <Route path='/layout/*'  element={ <Private> <Layout/> </Private>}  />
-                </Routes>
-              </Authcontext>
-              {/* <Footer/> */}
-          </Router> 
-       
+      <Router>
+        <Header/>
+          <Authcontext>
+            <Routes>
+              {/* public Router */}
+              <Route path='/' element={ <HomePage/>} />
+              <Route path='/touch' element={ <GetInTouch/>}/>
+              <Route path='/signup' element={<Signup/>} />
+              <Route path='/login'  element={<Login/>} />
+              {/* private routes */}
+              <Route path='/layout/*'  element={ <Private> <Layout/> </Private>}  />
+            </Routes>
+          </Authcontext>
+        {/* <Footer/> */}
+      </Router> 
     </>
   )
 }

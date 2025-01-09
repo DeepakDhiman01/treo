@@ -20,15 +20,10 @@ const Layout = () => {
          {isauth ? (
             <Routes>
                <Route path='/about' element={<About />} />
-
                <Route path='/client' element={ <Private requiredRole="client" > <Client/> </Private>} />
-
                <Route path='/professional' element={ <Private  requiredRole="professional" > <Prodashboard/></Private>  }/>
-                   <Route path='/jobpost'  element={ <Private requiredRole="client"> <Jobpost/>  </Private> } />
-
+               <Route path='/jobpost'  element={ <Private requiredRole="client"> <Jobpost/>  </Private> } />
             </Routes>
-            
-         
          ) : (
             navigate('/')
          )}

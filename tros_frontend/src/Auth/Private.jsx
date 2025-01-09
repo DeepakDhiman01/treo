@@ -6,18 +6,14 @@ const Private = ({ children, requiredRole }) => {
   console.log("this is the value of reqired in private ", requiredRole)
   
   const { isauth, role , loading } = useAuth();
-     console.log("the value of role ", role)
- if(loading) {
-  console.log("please wait data is loading")
-  return <div>Loading...</div>;
-   
- }
-
-
+  console.log("the value of role ", role)
+  if(loading) {
+    console.log("please wait data is loading")
+    return <div>Loading...</div>;
+    }
   if (!isauth) {
     console.log("if isauth ")
     return <Navigate to="/login" replace />;
-   
   }
   // Check if the user's role matches the required role for the route
   if (requiredRole && role !== requiredRole) {

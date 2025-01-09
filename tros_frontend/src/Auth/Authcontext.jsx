@@ -3,16 +3,14 @@ import { useNavigate } from 'react-router-dom';
 //  import { jwtDecode } from 'jwt-decode';
 import {jwtDecode} from 'jwt-decode';
 
-
 const MyContext = createContext();
-
 
 const Authcontext = ({children}) => {
  
-    const [isauth, setAuth] = useState(false);
-     const [loading, setLoading] = useState(true); 
-    const navigate = useNavigate();
-    const [role ,setRole] = useState();
+  const [isauth, setAuth] = useState(false);
+  const [loading, setLoading] = useState(true); 
+  const navigate = useNavigate();
+  const [role ,setRole] = useState();
 
 // Function to handle login
   // const login = ( token) => {
@@ -119,8 +117,3 @@ export const useAuth = () => useContext(MyContext);
 
 
 export default Authcontext
-
-
-
-
-
