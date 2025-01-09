@@ -6,6 +6,7 @@ import { useAuth } from '../Auth/Authcontext'
 import Client from './clientdashboard/Client'
 import Prodashboard from './Prodash/Prodashboard'
 import Private from '../Auth/Private'
+import Jobpost from './Jobpost/Jobpost'
 
 
 const Layout = () => {
@@ -23,6 +24,8 @@ const Layout = () => {
                <Route path='/client' element={ <Private requiredRole="client" > <Client/> </Private>} />
 
                <Route path='/professional' element={ <Private  requiredRole="professional" > <Prodashboard/></Private>  }/>
+                   <Route path='/jobpost'  element={ <Private requiredRole="client"> <Jobpost/>  </Private> } />
+
             </Routes>
             
          

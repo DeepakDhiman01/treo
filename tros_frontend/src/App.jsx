@@ -26,7 +26,7 @@ function App() {
       <div>
         <div className='main-container'>
           <Router>
-            <Header/>
+            {/* <Header/> */}
               <Authcontext>
                 <Routes>
                   {/* public Router */}
@@ -35,7 +35,7 @@ function App() {
                   <Route path='/signup' element={<Signup/>} />
                   <Route path='/login'  element={<Login/>} />
                   {/* private routes */}
-                  <Route path='/layout/*'  element={<Private><Layout/></Private>}  />
+                  <Route path='/layout/*'  element={<Layout/>}  />
                 </Routes>
               </Authcontext>
               <Footer/>

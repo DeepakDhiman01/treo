@@ -77,7 +77,7 @@ const login = async (req, res) => {
     const payload = {
       username: user.username,
       userid: user._id,
-      userrole: user.role,
+      role: user.role,
     };
 
     console.log("this is a pay load ", payload);
