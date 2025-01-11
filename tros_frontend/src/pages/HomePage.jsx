@@ -5,6 +5,11 @@ import heroImageOne from '../assets/images/young-caregiver-helping-senior-woman.
 import heroImageTwo from '../assets/images/medium-shot-doctor-helping-woman.png'
 import thumb from '../assets/images/shapes/thumb.png'
 
+// svg
+import { HiOutlineUserGroup } from "react-icons/hi2";
+import { MdOutlinePersonalInjury } from "react-icons/md";
+
+
 function homepage() {
   return (
     <>
@@ -13,7 +18,7 @@ function homepage() {
             <div className='container'>
               <div className='hero-main grid grid-cols-2'>
                 <div className='hero-left content-center px-24'>
-                  <h1 className='font-bold text-[60px]'>Take Care of <span className='hero-p bg-clip-text bg-gradient-to-r from-[#75C4E7] to-[#0410EF]'>your health </span>in time</h1>
+                  <h1 className='font-bold text-[60px]'>Take Care of <span className='hero-p bg-clip-text bg-gradient-to-r from-[#75C4E7] to-[#087ec3]'>your health </span>in time</h1>
                   <p className='pt-5'>Lorem ipsum dolor sit amet consectetur adipiscing elit et, 
                   venenatis platea lacus cubilia suscipit sodales sollicitudin, egetLorem ipsum dolor sit amet consectetur adipiscing elit et, venenatis platea lacus cubilia suscipit sodales sollicitudin, eget</p>
                   <div className='hero-btn'>
@@ -49,9 +54,58 @@ function homepage() {
               <div className='main-content col-span-7'>
                 <div className='text-right'>
                   <span className='font-bold'>About Us</span>
-                  <h2 className='text-6xl font-semibold'>Who <span className='hero-p bg-clip-text bg-gradient-to-r from-[#75C4E7] to-[#0410EF]'>We Are</span></h2>
+                  <h2 className='text-6xl font-semibold'>Who <span className='hero-p bg-clip-text bg-gradient-to-r from-[#75C4E7] to-[#74A4ED]'>We Are</span></h2>
                   <p className='mt-4'>“ It’s not hard to find someone to help you with tasks. It’s finding someone who you can trust and depend on that gets tricky. That’s why, at Tranquility Outreach Support Services recruiting the right people is at the heart of our business. “</p>
                   <span className='bg-primary-color text-white py-3 mt-4 px-10 rounded-full inline-block'>Let's Talk</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className='service-section bg-[#E1F4FC]'>
+          <div className='container'>
+            <div className='service-main py-14'>
+              <div className='service-top grid grid-cols-4'>
+                <div className='col-span-1'>
+                  <span className='font-bold text-black'>Lourim Ipsum</span>
+                  <h3 className='text-6xl font-semibold'>Our <span className='hero-p bg-clip-text bg-gradient-to-r from-[#75C4E7] to-[#74A4ED]'>Service</span></h3>
+                </div>
+                <div className='col-span-3 text-right content-end'>
+                  <p className='text-xl'>At Tranquility Outreach Support Services we've got all your NDIS covered! Whether you need help with;</p>
+                </div>
+              </div>
+              <div className='my-12'>
+                <div className='grid grid-cols-4'>
+                  <div className='col-span-1'>
+                    <div className='bg-[#fff] m-3 p-9 rounded-2xl border-[#E5E5E5] border-1'>
+                      <HiOutlineUserGroup className='text-[50px] text-[#75C4E7]'/>
+                      <h4 className='my-3 font-semibold text-2xl'>Community Access</h4>
+                      <p>Lorem ipsum dolor sit amet consectetur adipiscing elit leo natoque, habitant dictum cras mattis et lobortis</p>
+                    </div>
+                  </div>
+                  <div className='col-span-1'>
+                    <div className='bg-[#fff] m-3 p-9 rounded-2xl border-[#E5E5E5] border-1'>
+                      <MdOutlinePersonalInjury className='text-[50px] text-[#75C4E7]'/>
+                      <h4 className='my-3 font-semibold text-2xl'>Personal Care</h4>
+                      <p>Lorem ipsum dolor sit amet consectetur adipiscing elit leo natoque, habitant dictum cras mattis et lobortis</p>
+                    </div>
+                  </div>
+                  <div className='col-span-1'>
+                    <div className='bg-[#fff] m-3 p-9 rounded-2xl border-[#E5E5E5] border-1'>
+                      <HiOutlineUserGroup className='text-[50px] text-[#75C4E7]'/>
+                      <h4 className='my-3 font-semibold text-2xl'>In-Home Supports</h4>
+                      <p>Lorem ipsum dolor sit amet consectetur adipiscing elit leo natoque, habitant dictum cras mattis et lobortis</p>
+                    </div>
+                  </div>
+                  <div className='col-span-1'>
+                    <div className='bg-[#fff] m-3 p-9 rounded-2xl border-[#E5E5E5] border-1'>
+                      <HiOutlineUserGroup className='text-[50px] text-[#75C4E7]'/>
+                      <h4 className='my-3 font-semibold text-2xl'>Transportation</h4>
+                      <p>Lorem ipsum dolor sit amet consectetur adipiscing elit leo natoque, habitant dictum cras mattis et lobortis</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

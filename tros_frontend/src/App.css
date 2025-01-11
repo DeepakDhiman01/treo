@@ -1,6 +1,9 @@
 *{
   font-family: "Plus Jakarta Sans", serif;
 }
+.hero-p{
+  color: transparent;
+}
 .header-main {
   transition: transform 0.3s ease, background-color 0.3s ease;
   transform: translateY(0);

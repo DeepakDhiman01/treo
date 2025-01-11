@@ -37,7 +37,7 @@ function App() {
               <Route path='/layout/*'  element={ <Private> <Layout/> </Private>}  />
             </Routes>
           </Authcontext>
-        {/* <Footer/> */}
+        <Footer/>
       </Router> 
     </>
   )
