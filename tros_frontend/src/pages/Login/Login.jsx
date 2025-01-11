@@ -54,7 +54,7 @@ const Login = () => {
   if (isauth) {
 
     console.log("login funcationis trigger");
-    return <Navigate to="/routes/home" />; // Redirect if already logged in
+    return <Navigate to="/home" />; // Redirect if already logged in
      
     
   }
