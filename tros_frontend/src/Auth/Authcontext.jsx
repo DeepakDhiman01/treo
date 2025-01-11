@@ -46,9 +46,9 @@ const Authcontext = ({children}) => {
 
       // Navigate based on role
       if (decodedToken.role === "client") {
-        navigate('/layout/client');
+        navigate('/routes/client');
       } else if (decodedToken.role === "professional") {
-        navigate('/layout/professional');
+        navigate('/routes/professional');
       }
     } catch (error) {
       console.error("Invalid token", error);
@@ -61,7 +61,7 @@ const Authcontext = ({children}) => {
     setAuth(false);
     setRole(null); // Reset role on logout
     localStorage.removeItem("token");
-    navigate('/login');
+    navigate('routes/login');
   };
 
   
