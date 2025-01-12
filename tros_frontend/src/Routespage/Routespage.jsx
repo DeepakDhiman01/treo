@@ -22,7 +22,7 @@ import About from '../pages/About'
 import Jobpost from '../pages/Jobpost/Jobpost'
 import Client from '../pages/clientdashboard/Client'
 import Overview from '../pages/Prodash/proMainPages/Overview'
-import Clander from '../pages/Prodash/proMainPages/Clender'
+import Clander from '../pages/Prodash/proMainPages/Calendar'
 
 const Routespage = () => {
 
