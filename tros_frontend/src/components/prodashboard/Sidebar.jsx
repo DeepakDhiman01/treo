@@ -28,20 +28,21 @@ const Sidebar = () => {
                       <span className='text-sm font-bold'>Main Menu</span>
                       <li>
                         <div className=''>
-                        <NavLink to="/"
+                        <NavLink to="/professional"
                           style={({ isActive }) => ({
                             backgroundColor: isActive ? "#E1F4FC" : "transparent",
                             padding: "8px 12px",
                             border:  isActive ? "1px solid #E5E5E5" : "1px solid transparent",
                             textDecoration: "none"
                           })}
-                        className="flex items-center py-2 px-3 space-x-2 rounded-md" > <LuLayoutDashboard />Dashboard
+                        className="flex items-center py-2 px-3 space-x-2 rounded-md" > 
+                        <LuLayoutDashboard />Dashboard
                         </NavLink>
                         </div>
                       </li>
                       <li className='my-1'>
                         <div className=''>
-                        <NavLink to="overview"
+                        <NavLink to="clander"
                           style={({ isActive }) => ({
                             backgroundColor: isActive ? "#E1F4FC" : "transparent",
                             padding: "8px 12px",

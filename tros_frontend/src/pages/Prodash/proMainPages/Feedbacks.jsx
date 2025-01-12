@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Overview() {
+function Clender() {
   return (
     <div>
-      Overview
+      Feedbacks
     </div>
   )
 }
 
-export default Overview
+export default Clender
