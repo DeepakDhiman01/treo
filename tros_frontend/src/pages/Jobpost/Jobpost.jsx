@@ -10,7 +10,14 @@ const [ payPerHours, setPayPerHours ] = useState("")
 const [ category, setCategory ] = useState("")
 
 
+//  radio buttton
+  const [gender, setGender] = useState('');
 
+
+  // Handle gender change
+  const handleGenderChange = (event) => {
+    setGender(event.target.value);
+  };
 
 
 const postingjob = ( )=>{
@@ -47,6 +54,31 @@ axios.post("http://localhost:7000/user/jobpost", {data} )
     <input type="text"  placeholder='enter your responsiblity '  value={responsiblity} onChange={ (e)=>setResponsiblity(e.target.value)} />
     <input type="text"  placeholder='enter your  payPerHours '  value={payPerHours} onChange={ (e)=>setPayPerHours(e.target.value)} />
     <input type="text"  placeholder='enter your  category '  value={category} onChange={ (e)=>setCategory(e.target.value)} />
+    <div>
+        <h3>Gender</h3>
+        <label>
+          <input 
+            type="radio" 
+            name="gender" 
+            value="male" 
+            checked={gender === 'male'} 
+            onChange={handleGenderChange} 
+          /> 
+          Male
+        </label>
+        <label>
+          <input 
+            type="radio" 
+            name="gender" 
+            value="female" 
+            checked={gender === 'female'} 
+            onChange={handleGenderChange} 
+          /> 
+          Female
+        </label>
+      </div>
+
+<input type="text" placeholder=''  value={age} onChange={ (e)=>setCategory(e.target.value)} />
 
     <button  onClick={()=>postingjob()} > Post</button>
     </form>
