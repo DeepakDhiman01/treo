@@ -22,6 +22,7 @@ import About from '../pages/About'
 import Jobpost from '../pages/Jobpost/Jobpost'
 import Client from '../pages/clientdashboard/Client'
 import Overview from '../pages/Prodash/proMainPages/Overview'
+import Clander from '../pages/Prodash/proMainPages/Clender'
 
 const Routespage = () => {
 
@@ -38,9 +39,8 @@ const Routespage = () => {
               <Route path='/signup' element={<Signup/>} />
               <Route path='/login'  element={<Login/>} />
               <Route path='/professional'  element={<Prodashboard/>} >
-              
-              <Route path='overview' element={ <Overview/>} />
-
+                <Route path='/professional' element={<Overview/>} />
+                <Route path='clander' element={<Clander/>} />
               </Route>
               {/* private routes */}
               {/* <Route path='/layout/*'  element={ <Private> <Layout/> </Private>}  /> */}
