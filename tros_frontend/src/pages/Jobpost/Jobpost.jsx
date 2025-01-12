@@ -25,7 +25,7 @@ const Jobpost = () => {
   const [avilabledate, setAvilabledate] = useState("");
 
   const postingJob = (e) => {
-    e.preventDefault(); // Prevent default form submission
+    // e.preventDefault(); // Prevent default form submission
 
     const data = {
       jobtittle,
