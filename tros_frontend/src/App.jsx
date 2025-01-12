@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
 
 import './App.css'
 
@@ -16,7 +16,7 @@ function App() {
  console.log(" code run in app.js")
   return (
     <>
-      <Router>
+      <BrowserRouter>
         {/* <Header/> */}
           <Authcontext>
             <Routes>
@@ -25,7 +25,7 @@ function App() {
             </Routes>
           </Authcontext>
         {/* <Footer/> */}
-      </Router> 
+      </BrowserRouter> 
     </>
   )
 }
