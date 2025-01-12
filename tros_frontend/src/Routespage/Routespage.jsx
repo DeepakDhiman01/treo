@@ -41,6 +41,7 @@ const Routespage = () => {
               <Route path='/professional'  element={<Prodashboard/>} >
                 <Route index element={<Overview/>} />
                 <Route path='clander' element={<Clander/>} />
+                
               </Route>
               {/* private routes */}
               {/* <Route path='/layout/*'  element={ <Private> <Layout/> </Private>}  /> */}
