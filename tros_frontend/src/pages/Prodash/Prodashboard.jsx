@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link, Outlet } from 'react-router-dom';
 
 // icon
 import { LuLayoutDashboard } from "react-icons/lu";
@@ -11,20 +12,24 @@ import { PiGearSix } from "react-icons/pi";
 import { MdOutlineLiveHelp } from "react-icons/md";
 import { VscFeedback } from "react-icons/vsc";
 
+// image
+import logo from "../../assets/images/logo/Tranquility-Outreach-Support-Services-Logo.png"
 
 
 
 const Prodashboard = () => {
   return (
     <>
-      <div>
+      <div className='bg-[#fcfbfc]'>
         <div className='container'>
           <div>
             <div></div>
             <div className='grid grid-cols-6'>
               <div className='sideBarTop col-span-1'>
                 <div>
-                  <div className='Logo'>Logo</div>
+                  <div className='Logo'>
+                    <img src={logo} className='w-5/6 my-4'/>
+                  </div>
                   <div className='side-bar-links py-3'>
                     <ul>
                       <span className='text-sm font-bold'>Main Menu</span>
@@ -33,7 +38,7 @@ const Prodashboard = () => {
                       </li>
                       <li className='my-1'>
                         <div className='flex items-center py-2 px-3 space-x-2'><HiOutlineCalendarDateRange />
-                        <a>Calendar</a></div>
+                        <Link to="/overview">Calendar</Link></div>
                       </li>
                       <li className='my-1'>
                         <div className='flex items-center py-2 px-3 space-x-2'><CgWorkAlt /><a>Jobs</a></div>
@@ -68,7 +73,16 @@ const Prodashboard = () => {
                   </ul>
                 </div>
               </div>
-              <div className='sideBar col-span-4'>Hello</div>
+              <div className='sideBar col-span-4'>
+                <div className='pro-main'>
+                  <div className='proma-inner'>
+                    <div className='top-bar'></div>
+                    <div className='middle-container'>
+                      <Outlet/>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
