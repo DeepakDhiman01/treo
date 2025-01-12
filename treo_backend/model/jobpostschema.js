@@ -32,9 +32,45 @@ location:{
 responsiblity :{
     type:String,
     required:true
-}
+},
 
+gender:{
+    type:String,
+    enum: ['male', 'female'],
+     default: 'male'
+},
+
+
+age:{
+    type:String,
+    required:true,
+},
+
+Wantdate:{
+ type:Date,
+ require:true
+},
+Wanttime:{
+    type:String,
+    require:true
+   },
+
+
+
+   avilabedate:{
+    type:Date,
+    require:true
+   },
+   avilabletime:{
+       type:String,
+       require:true
+      },
  
+      postdate:{
+        type:Date,
+        require:true
+      }
+
 })
 
 
