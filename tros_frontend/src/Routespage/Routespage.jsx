@@ -39,7 +39,7 @@ const Routespage = () => {
               <Route path='/signup' element={<Signup/>} />
               <Route path='/login'  element={<Login/>} />
               <Route path='/professional'  element={<Prodashboard/>} >
-                <Route path='/professional' element={<Overview/>} />
+                <Route index element={<Overview/>} />
                 <Route path='clander' element={<Clander/>} />
               </Route>
               {/* private routes */}
