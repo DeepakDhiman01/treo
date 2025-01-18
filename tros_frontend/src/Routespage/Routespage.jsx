@@ -28,12 +28,11 @@ const Routespage = () => {
 
   return (
    <>
-        
-        {/* <Header/> */}
+        <Header/>
           <Authcontext>
             <Routes>
               {/* public Router */}
-              <Route path='/home' element={ <HomePage/>} />
+              <Route index element={ <HomePage/>} />
             
               <Route path='/touch' element={ <GetInTouch/>}/>
               <Route path='/signup' element={<Signup/>} />

@@ -13,12 +13,12 @@ const Private = ({ children, requiredRole }) => {
     }
   if (!isauth) {
     console.log("if isauth ")
-    return <Navigate to="/routes/login" replace />;
+    return <Navigate to="/login" replace />;
   }
   // Check if the user's role matches the required role for the route
   if (requiredRole && role !== requiredRole) {
     console.log("if role")
-    return <Navigate to="/routes/home" replace />;
+    return <Navigate to="/" replace />;
   }
 
   return children;
