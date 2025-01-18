@@ -23,6 +23,10 @@ import Jobpost from '../pages/Jobpost/Jobpost'
 import Client from '../pages/clientdashboard/Client'
 import Overview from '../pages/Prodash/proMainPages/Overview'
 import Clander from '../pages/Prodash/proMainPages/Calendar'
+import Jobs from '../pages/Prodash/proMainPages/Jobs'
+
+
+
 
 const Routespage = () => {
 
@@ -41,6 +45,8 @@ const Routespage = () => {
               <Route path='/professional'  element={<Prodashboard/>} >
                 <Route index element={<Overview/>} />
                 <Route path='clander' element={<Clander/>} />
+                <Route path='jobs' element={<Jobs/>} />
+                
               </Route>
               {/* private routes */}
               {/* <Route path='/layout/*'  element={ <Private> <Layout/> </Private>}  /> */}
