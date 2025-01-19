@@ -1,9 +1,4 @@
 
-
-
-
-
-
 const jobposting = require('../model/jobpostschema');
 
 const postjob = async (req, res) => {
@@ -11,14 +6,15 @@ const postjob = async (req, res) => {
     location,
     jobdiscription,
     jobtittle,
-    payPerHours,
+    // payPerHours,
     category,
-    responsiblity,
-    avilabletime,
-    avilabledate,
-    wantdate,
-    wanttime,
+    aboutus,
+     starttime,
+     startdate,
+    // wantdate,
+    // wanttime,
     age,
+    days,
     gender,
   } = req.body;
 
@@ -27,15 +23,16 @@ const postjob = async (req, res) => {
     !location ||
     !jobdiscription ||
     !jobtittle ||
-    !payPerHours ||
+    // !payPerHours ||
     !category ||
-    !responsiblity ||
+    !aboutus ||
     !avilabletime ||
     !avilabledate ||
-    !wantdate ||
-    !wanttime ||
+    // !wantdate ||
+    // !wanttime ||
     !age ||
-    !gender
+    !gender||
+    !days
   ) {
     return res
       .status(400)
@@ -48,15 +45,16 @@ const postjob = async (req, res) => {
       location,
       jobdiscription,
       jobtittle,
-      payPerHours,
+      // payPerHours,
       category,
-      responsiblity,
-      avilabletime,
-      avilabledate,
-      wantdate,
-      wanttime,
+      aboutus,
+      starttime,
+      startdate,
+      // wantdate,
+      // wanttime,
       age,
       gender,
+      days,
       postdate: Date.now(), // Save current timestamp
     });
 

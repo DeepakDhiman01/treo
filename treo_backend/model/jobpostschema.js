@@ -6,10 +6,10 @@
 const mongoose = require("mongoose");
 
 const jobpost = new mongoose.Schema({
-  payPerHours: {
-    type: Number,
-    required: true,
-  },
+  // payPerHours: {
+  //   type: Number,
+  //   required: true,
+  // },
   jobtittle: {
     type: String,
     required: true,
@@ -26,7 +26,7 @@ const jobpost = new mongoose.Schema({
     type: String,
     required: true,
   },
-  responsiblity: {
+  aboutus: {
     type: String,
     required: true,
   },
@@ -36,25 +36,33 @@ const jobpost = new mongoose.Schema({
     default: "male",
   },
   age: {
+
+    // clinet age which want to a employ
     type: Number, // Changed from String to Number
     required: true,
   },
-  wantdate: {
+  startdate: {
     type: Date,
     required: true, // Fixed typo: was `require`
   },
-  wanttime: {
+  starttime: {
     type: String,
     required: true, // Fixed typo: was `require`
   },
-  avilabledate: {
-    type: Date,
-    required: true, // Fixed typo: was `require`
+
+
+  days :{
+    type:String,
+    required:true,
   },
-  avilabletime: {
-    type: String,
-    required: true, // Fixed typo: was `require`
-  },
+  // avilabledate: {
+  //   type: Date,
+  //   required: true, // Fixed typo: was `require`
+  // },
+  // avilabletime: {
+  //   type: String,
+  //   required: true, // Fixed typo: was `require`
+  // },
   postdate: {
     type: Date,
     default: Date.now, // Default to the current date and time
