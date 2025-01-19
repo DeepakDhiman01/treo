@@ -31,7 +31,7 @@ const Prodashboard = () => {
                 <div className='pro-main'>
                   <div className='proma-inner'>
                     <div className='top-bar'></div>
-                    <div className='middle-container'>
+                    <div className='middle-container py-5 px-5'>
                       <Outlet/>
                     </div>
                   </div>

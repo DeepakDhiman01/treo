@@ -1,6 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
+// icon
+import { IoLocationOutline } from "react-icons/io5";
+
 function Jobs() {
   const [job, setJob] = useState([]); // State for jobs
   const [error, setError] = useState(null); // State for error handling
@@ -23,14 +26,24 @@ function Jobs() {
 
   return (
     <>
-      <h1>Job List</h1>
-      { job.length > 0 ? (
-        job.map((jb, index) => (
-          <h2 key={index}>{ jb.jobtittle}</h2> // Use a fallback for property names
-        ))
-      ) : (
-        <p>No jobs available at the moment.</p> // Handle empty job list
-      )}
+      <div>
+        <h1 className='text-3xl font-bold pb-4'>Job List</h1>
+        <div className=''>
+          {job.length > 0 ? (
+            job.map((job, index) => (
+              <div className='my-2 bg-white py-2 px-4 rounded-lg border-1 border-[#e5e5e5]'>
+                 <h2 className='font-semibold text-lg' key={index}>{job.jobtittle}</h2>
+                 <div className='locations my-3'>
+                  <span className='flex items-center content-center gap-1'><IoLocationOutline />{job.location}</span>
+                 </div>
+              </div>
+            ))
+          ) : (
+            <p>No jobs available at the moment.</p> // Handle empty job list
+          )}
+        </div>
+        
+      </div>
     </>
   );
 }
