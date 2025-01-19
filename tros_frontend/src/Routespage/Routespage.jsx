@@ -32,7 +32,7 @@ const Routespage = () => {
 
   return (
    <>
-        <Header/>
+        {/* <Header/> */}
           <Authcontext>
             <Routes>
               {/* public Router */}
