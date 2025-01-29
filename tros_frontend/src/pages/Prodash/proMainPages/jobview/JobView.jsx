@@ -9,9 +9,9 @@ const JobView = () => {
 
   useEffect(() => {
       axios
-      .post(`http://localhost:7000/user/job/${id}`)
+      .post(`http://localhost:7000/user/jobview/${id}`)
       .then((res) => {
-        console.log(res)
+        console.log("this is a jobviewreaponse ", res)
       })
       .catch((err) => {
         console.log(err)
