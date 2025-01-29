@@ -12,5 +12,5 @@ Route.post('/signup', userSignup )
 Route.post('/login' ,login)
 Route.post('/jobpost', postjob)
 Route.post('/job', showjobs)
-Route.post('/job', jobview)
+Route.post('/jobview/:id', jobview)
 module.exports = Route

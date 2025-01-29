@@ -8,6 +8,7 @@ const JobView = () => {
   const id = useParams()
 
   useEffect(() => {
+    console.log()
       axios
       .post(`http://localhost:7000/user/jobview/${id}`)
       .then((res) => {
