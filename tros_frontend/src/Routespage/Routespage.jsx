@@ -24,6 +24,7 @@ import Client from '../pages/clientdashboard/Client'
 import Overview from '../pages/Prodash/proMainPages/Overview'
 import Clander from '../pages/Prodash/proMainPages/Calendar'
 import Jobs from '../pages/Prodash/proMainPages/Jobs'
+import JobView from '../pages/Prodash/proMainPages/jobview/JobView';
 
 
 
@@ -45,6 +46,8 @@ const Routespage = () => {
                 <Route index element={<Overview/>} />
                 <Route path='clander' element={<Clander/>} />
                 <Route path='jobs' element={<Jobs/>} />
+                <Route path='jobs/job-view/:id' element={<JobView/>} />
+
                 
               </Route>
               {/* private routes */}
