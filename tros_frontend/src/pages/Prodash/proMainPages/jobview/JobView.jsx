@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 const JobView = () => {
 
   const [jobData, setJobData] = useState([]);
-  const id = useParams()
+  const {id} = useParams()
 
   useEffect(() => {
     console.log()
